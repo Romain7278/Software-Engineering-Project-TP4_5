@@ -20,5 +20,4 @@ router.post("/api/doctors", (req, res) => {
 	doctors.push(newDoctor);
 	return res.status(201).json(newDoctor);
 });
-
 export default router;
