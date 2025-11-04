@@ -8,10 +8,10 @@ const doctors = [
 ];
 
 // GET all doctors
-router.get("/", (req, res) => res.status(200).json(doctors));
+router.get("/api/doctors", (req, res) => res.status(200).json(doctors));
 
 // POST a new doctor
-router.post("/", (req, res) => {
+router.post("/api/doctors", (req, res) => {
 	const { name, specialty } = req.body;
 	if (!name || !specialty) {
 		return res.status(400).json({ error: "Missing required fields" });
